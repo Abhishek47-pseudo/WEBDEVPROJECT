@@ -1,0 +1,431 @@
+/*
+ * Custom CSS for AidFlow AI Dashboard
+ * This file handles all custom styling.
+ */
+
+/* Root styles for colors and fonts */
+:root {
+    --primary-bg: #011936; /* Very Dark Blue */
+    --secondary-bg: #465362; /* Dark Gray */
+    --text-color: #F4FFFD; /* Off-white */
+    --heading-color: #F4FFFD; /* Off-white */
+    --brand-color: #ED254E; /* Bright Red */
+    --accent-color: #F9DC5C; /* Yellow */
+    --button-bg: #ED254E; /* Bright Red */
+    --button-hover-bg: #C81D40; /* Darker Red */
+    --card-bg: #465362; /* Dark Gray */
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Global container and layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header and Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-bg);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--brand-color);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-bg);
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 2px 10px var(--shadow-color);
+    }
+
+    .nav.active {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 1rem;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://placehold.co/1920x1080/011936/F4FFFD?text=AI+%26+Robotics') center/cover no-repeat;
+    text-align: center;
+    position: relative;
+    padding-top: 80px; /* Offset for fixed header */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin: 0 0 1rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin: 0 0 2rem;
+    animation: fadeInUp 1s ease-out 0.5s;
+    animation-fill-mode: both;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeInUp 1s ease-out 1s;
+    animation-fill-mode: both;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-3px);
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+/* General Section Styling */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.about-section, .services-section, .team-section, .contact-section {
+    padding: 4rem 0;
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.about-grid p {
+    color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--brand-color);
+    margin-bottom: 1rem;
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.service-description {
+    color: var(--text-color);
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    border: 5px solid var(--brand-color);
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.member-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.member-role {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--secondary-bg);
+    padding: 6rem 0;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.contact-card {
+    background-color: var(--primary-bg);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px var(--shadow-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: none;
+    border: 2px solid var(--brand-color);
+    color: var(--brand-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--brand-color);
+    color: var(--primary-bg);
+}
+
+/* Animations */
+.hidden-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-bg);
+    padding: 2rem 0;
+    border-top: 1px solid var(--card-bg);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--brand-color);
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
