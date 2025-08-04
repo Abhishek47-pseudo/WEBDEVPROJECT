@@ -54,50 +54,61 @@
 
 
         <section id="services" class="services-section hidden-section">
-    <div class="container">
-        <h2 class="section-title text-center">Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-satellite"></i></div>
-                <h3 class="service-title">Aerial Image Analysis</h3>
-                <p class="service-description">We process geotagged aerial and satellite images using deep learning to detect floods, infrastructure damage, road blockages, and more.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
-                <h3 class="service-title">Geospatial Visualization</h3>
-                <p class="service-description">Critical disaster predictions are plotted on an interactive map interface, providing real-time situational awareness to response teams.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-database"></i></div>
-                <h3 class="service-title">Metadata Integration</h3>
-                <p class="service-description">We fuse AI-generated labels with image metadata—like timestamp and GPS coordinates—to create enriched, actionable datasets.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-code-branch"></i></div>
-                <h3 class="service-title">Modular Frontend System</h3>
-                <p class="service-description">Our responsive and scalable dashboard supports plug-and-play modules like disaster filtering, severity ranking, and smart routing.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-bolt"></i></div>
-                <h3 class="service-title">Real-Time Intelligence</h3>
-                <p class="service-description">AidFlow AI delivers timely insights through automated pipelines—removing reliance on manual tagging and delayed reporting.</p>
-            </div>
-            <div class="service-card">
-                <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
-                <h3 class="service-title">API & System Integration</h3>
-                <p class="service-description">We offer easy integration with government weather/disaster APIs, enhancing functionality with live environmental updates.</p>
-            </div>
-        </div>
+  <div class="container">
+    <h2 class="section-title text-center">Our Services</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <h3 class="service-title"><a href="#map">Live Disasters</a></h3>
+        <p class="service-description">Track ongoing disasters in real time with up-to-date geospatial insights and incident reports.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-route"></i></div>
+        <h3 class="service-title">Smart Routing</h3>
+        <p class="service-description">Find the safest and fastest paths using AI-based routing that avoids danger zones and blockages.</p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-box-open"></i></div>
+        <h3 class="service-title">Search Inventory</h3>
+        <p class="service-description">Quickly locate and request supplies from distributed aid inventories and local storage hubs.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <h3 class="service-title">Contribute</h3>
+        <p class="service-description">Upload images, share local information, or volunteer your help to support relief operations.</p>
+      </div>
+
     </div>
+  </div>
 </section>
 
+
 <section id="map" class="map-section hidden-section">
-    <div class="container">
-        <h2 class="section-title text-center">Live Disaster Map</h2>
-        <p class="text-center">Visualize real-time AI predictions of affected regions with geotagged imagery overlays.</p>
-        <div id="disaster-map"></div>
+  <div class="map-container">
+    <div id="disaster-map"></div>
+    <div id="data-table-container">
+      <h3>Disaster Data</h3>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <!-- <th>Image</th> -->
+            <th>Time</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Labels</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
+  </div>
 </section>
+
 
 
         <section id="team" class="team-section hidden-section">
@@ -105,19 +116,19 @@
                 <h2 class="section-title text-center">Meet the Team</h2>
                 <div class="team-grid">
                     <div class="team-member">
-                        <div class="member-photo"></div>
+                        <div class="member-photo"><img src ='imgs/Aaditya.jpg'></div>
                         <h3 class="member-name">Aaditya Arya</h3>
                     </div>
                     <div class="team-member">
-                        <div class="member-photo"></div>
+                        <div class="member-photo"><img src ='imgs/Abhishek.jpg'></div>
                         <h3 class="member-name">Abhishek Kumar</h3>
                     </div>
                     <div class="team-member">
-                        <div class="member-photo"></div>
+                        <div class="member-photo"><img src ='imgs/Parth.jpg'></div>
                         <h3 class="member-name">Parth Mehta</h3>
                     </div>
                     <div class="team-member">
-                        <div class="member-photo"></div>
+                        <div class="member-photo"><img src ='imgs/Sydney.jpg'></div>
                         <h3 class="member-name">Sydney Sweeny</h3>
                     </div>
                 </div>
@@ -148,6 +159,6 @@
 
 <script src="js/script.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="mapping.js"></script>
+<script src="js/mapping.js"></script>
 </body>
 </html>

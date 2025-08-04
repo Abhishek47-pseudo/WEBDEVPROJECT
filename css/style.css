@@ -1,10 +1,10 @@
 
 :root {
-    --primary-bg: #0B1E2D;           /* Dark navy - professional & grounded */
-    --secondary-bg: #1F2F3D;         /* Slightly lighter for depth contrast */
+    --primary-bg: #06576d;           
+    --secondary-bg: #3f698e;         /* Slightly lighter for depth contrast */
     --text-color: #E6F0F3;           /* Soft white-blue - easy on eyes */
-    --heading-color: #FFFFFF;        /* Clear white for headers */
-    --brand-color: #2FA8CC;          /* Bright cyan-blue - signals tech + trust */
+    --heading-color: #ffb625;        /* Clear white for headers */
+    --brand-color: #ccc72f;          /* Bright cyan-blue - signals tech + trust */
     --accent-color: #F7A440;         /* Orange-yellow - used sparingly for alerts/highlights */
     --button-bg: #2FA8CC;            /* Matches brand color for CTAs */
     --button-hover-bg: #2389A6;      /* Darker shade for hover interaction */
@@ -230,6 +230,10 @@ body {
     gap: 2rem;
     margin-top: 3rem;
 }
+#services a{
+    color: var(--heading-color);
+    text-decoration: none; 
+}
 
 @media (min-width: 768px) {
     .services-grid {
@@ -239,7 +243,7 @@ body {
 
 @media (min-width: 1024px) {
     .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -272,6 +276,14 @@ body {
 
 .service-description {
     color: var(--text-color);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .team-grid {
@@ -427,15 +439,63 @@ body {
         align-items: center;
     }
 }
+body {
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--primary-bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+.map-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
 
 #disaster-map {
-    height: 80vh;
-    width: 100%;
-    margin: 2rem 0;
-    border-radius: 12px;
-    box-shadow: 0 0 20px var(--shadow-color);
-  }
-  .map-section {
-    background-color: var(--secondary-bg);
-    padding: 2rem 1rem;
-  }
+  height: 80vh;
+  width: 45%;
+  min-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--shadow-color);
+  background-color: #ccc; /* fallback if map fails */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#data-table-container {
+  width: 55%;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--shadow-color);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+#data-table th, #data-table td {
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-bg);
+  text-align: left;
+}
+
+#data-table th {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
