@@ -1,21 +1,17 @@
-/*
- * Custom CSS for AidFlow AI Dashboard
- * This file handles all custom styling.
- */
 
-/* Root styles for colors and fonts */
 :root {
-    --primary-bg: #011936; /* Very Dark Blue */
-    --secondary-bg: #465362; /* Dark Gray */
-    --text-color: #F4FFFD; /* Off-white */
-    --heading-color: #F4FFFD; /* Off-white */
-    --brand-color: #ED254E; /* Bright Red */
-    --accent-color: #F9DC5C; /* Yellow */
-    --button-bg: #ED254E; /* Bright Red */
-    --button-hover-bg: #C81D40; /* Darker Red */
-    --card-bg: #465362; /* Dark Gray */
-    --shadow-color: rgba(0, 0, 0, 0.5);
+    --primary-bg: #0B1E2D;           /* Dark navy - professional & grounded */
+    --secondary-bg: #1F2F3D;         /* Slightly lighter for depth contrast */
+    --text-color: #E6F0F3;           /* Soft white-blue - easy on eyes */
+    --heading-color: #FFFFFF;        /* Clear white for headers */
+    --brand-color: #2FA8CC;          /* Bright cyan-blue - signals tech + trust */
+    --accent-color: #F7A440;         /* Orange-yellow - used sparingly for alerts/highlights */
+    --button-bg: #2FA8CC;            /* Matches brand color for CTAs */
+    --button-hover-bg: #2389A6;      /* Darker shade for hover interaction */
+    --card-bg: #243645;              /* Deep blue-gray for visual layering */
+    --shadow-color: rgba(0, 0, 0, 0.4); /* Slightly softer shadows */
 }
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -26,14 +22,14 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Global container and layout */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
-/* Header and Navigation */
+
 .header {
     position: fixed;
     top: 0;
@@ -125,7 +121,6 @@ body {
     }
 }
 
-/* Hero Section */
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -134,7 +129,7 @@ body {
     background: url('https://placehold.co/1920x1080/011936/F4FFFD?text=AI+%26+Robotics') center/cover no-repeat;
     text-align: center;
     position: relative;
-    padding-top: 80px; /* Offset for fixed header */
+    padding-top: 80px; 
 }
 
 .hero-section::before {
@@ -197,7 +192,6 @@ body {
     }
 }
 
-/* General Section Styling */
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -213,7 +207,7 @@ body {
     padding: 4rem 0;
 }
 
-/* About Section */
+
 .about-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -230,7 +224,6 @@ body {
     }
 }
 
-/* Services Section */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -281,7 +274,6 @@ body {
     color: var(--text-color);
 }
 
-/* Team Section */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -326,7 +318,7 @@ body {
     color: var(--text-color);
 }
 
-/* Contact Section */
+
 .contact-section {
     background-color: var(--secondary-bg);
     padding: 6rem 0;
@@ -362,7 +354,6 @@ body {
     color: var(--primary-bg);
 }
 
-/* Animations */
 .hidden-section {
     opacity: 0;
     transform: translateY(30px);
@@ -395,12 +386,11 @@ body {
         transform: translateY(0);
     }
 }
-
-/* Footer */
 .footer {
     background-color: var(--primary-bg);
     padding: 2rem 0;
     border-top: 1px solid var(--card-bg);
+    box-shadow: 0 -2px 10px var(--shadow-color); /* subtle elevation */
 }
 
 .footer-content {
@@ -410,22 +400,42 @@ body {
     align-items: center;
     gap: 1rem;
     text-align: center;
+    color: var(--text-color); /* ensures text is readable on dark bg */
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.95rem;
 }
 
 .social-links a {
     color: var(--text-color);
     font-size: 1.25rem;
     margin: 0 0.5rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
     color: var(--brand-color);
+    transform: scale(1.1);
 }
 
 @media (min-width: 768px) {
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 }
+
+#disaster-map {
+    height: 80vh;
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 0 20px var(--shadow-color);
+  }
+  .map-section {
+    background-color: var(--secondary-bg);
+    padding: 2rem 1rem;
+  }

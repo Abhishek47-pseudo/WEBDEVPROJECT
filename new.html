@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Robotics - My Website</title>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"> -->
+    <title>AidFlow AI </title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
-</head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>    
 <body>
-    <!-- Header and Navigation -->
     <header class="header">
         <div class="container header-container">
-            <a href="#" class="logo">AI & Robotics</a>
+            <a href="#" class="logo">AidFlow AI </a>
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="#about" class="nav-link">About</a></li>
@@ -30,7 +28,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="hero-section">
             <div class="container hero-content">
                 <h1 class="hero-title">AidFlow AI</h1>
@@ -39,62 +36,70 @@
             </div>
         </section> 
 
-        <!-- About Section -->
-        <section id="about" class="about-section hidden-section">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text-container">
-                        <h2 class="section-title">About Us</h2>
-                        <p>We are pioneers in the field of artificial intelligence and robotics, dedicated to creating solutions that address real-world challenges. Our team of experts combines cutting-edge research with practical application to develop intelligent systems that enhance productivity, safety, and efficiency across various industries.</p>
-                    </div>
-                    <div class="about-text-container">
-                        <p>From automated manufacturing processes to intelligent data analysis, our work is at the forefront of technological innovation. We believe in a future where AI and robotics work in harmony with human expertise to create a more prosperous and sustainable world.</p>
-                        <p>Our commitment to excellence and continuous improvement drives us to push the boundaries of what is possible, delivering scalable and robust solutions tailored to our clients' unique needs.</p>
-                    </div>
+    <section id="about" class="about-section hidden-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text-container">
+                    <h2 class="section-title">About AidFlow AI</h2>
+                    <p>AidFlow AI is a next-generation disaster response platform that combines AI-driven image analysis with intuitive geospatial visualization to support faster, smarter humanitarian logistics. Tailored for NGOs and government agencies, the platform transforms aerial imagery into actionable insights—helping teams quickly assess damage, allocate resources, and respond with precision.</p>
+                </div>
+                <div class="about-text-container">
+                    <p>By leveraging deep learning for multi-label classification, AidFlow AI detects and geotags critical disaster features like floods, infrastructure damage, and fallen vegetation. These insights are presented through a dynamic, map-based dashboard that empowers users to visualize disaster severity, locations, and timestamps in real time.</p>
+                    <p>Built with scalability and frontline usability in mind, the platform lays the foundation for advanced features like automated rerouting, predictive alerts, and intelligent resource distribution. AidFlow AI bridges the gap between cutting-edge AI and real-world impact—offering a reliable, high-precision tool for modern disaster management teams.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Services Section -->
+
+
         <section id="services" class="services-section hidden-section">
-            <div class="container">
-                <h2 class="section-title text-center">Our Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-robot"></i></div>
-                        <h3 class="service-title">Robotic Process Automation</h3>
-                        <p class="service-description">Streamline operations and reduce manual errors with our advanced RPA solutions.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-brain"></i></div>
-                        <h3 class="service-title">Machine Learning Models</h3>
-                        <p class="service-description">Develop predictive and analytical models to extract valuable insights from your data.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-cogs"></i></div>
-                        <h3 class="service-title">Custom AI Solutions</h3>
-                        <p class="service-description">We build bespoke AI systems to solve your most complex business challenges.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-microchip"></i></div>
-                        <h3 class="service-title">Hardware Integration</h3>
-                        <p class="service-description">Seamlessly integrate our AI software with your existing or new robotic hardware.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="service-title">Data Analytics & Visualization</h3>
-                        <p class="service-description">Turn raw data into actionable intelligence with our comprehensive analytics tools.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3 class="service-title">Cybersecurity Automation</h3>
-                        <p class="service-description">Protect your assets with AI-driven threat detection and automated security protocols.</p>
-                    </div>
-                </div>
+    <div class="container">
+        <h2 class="section-title text-center">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-satellite"></i></div>
+                <h3 class="service-title">Aerial Image Analysis</h3>
+                <p class="service-description">We process geotagged aerial and satellite images using deep learning to detect floods, infrastructure damage, road blockages, and more.</p>
             </div>
-        </section>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h3 class="service-title">Geospatial Visualization</h3>
+                <p class="service-description">Critical disaster predictions are plotted on an interactive map interface, providing real-time situational awareness to response teams.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-database"></i></div>
+                <h3 class="service-title">Metadata Integration</h3>
+                <p class="service-description">We fuse AI-generated labels with image metadata—like timestamp and GPS coordinates—to create enriched, actionable datasets.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+                <h3 class="service-title">Modular Frontend System</h3>
+                <p class="service-description">Our responsive and scalable dashboard supports plug-and-play modules like disaster filtering, severity ranking, and smart routing.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                <h3 class="service-title">Real-Time Intelligence</h3>
+                <p class="service-description">AidFlow AI delivers timely insights through automated pipelines—removing reliance on manual tagging and delayed reporting.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3 class="service-title">API & System Integration</h3>
+                <p class="service-description">We offer easy integration with government weather/disaster APIs, enhancing functionality with live environmental updates.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- Team Section -->
+<section id="map" class="map-section hidden-section">
+    <div class="container">
+        <h2 class="section-title text-center">Live Disaster Map</h2>
+        <p class="text-center">Visualize real-time AI predictions of affected regions with geotagged imagery overlays.</p>
+        <div id="disaster-map"></div>
+    </div>
+</section>
+
+
         <section id="team" class="team-section hidden-section">
             <div class="container">
                 <h2 class="section-title text-center">Meet the Team</h2>
@@ -119,29 +124,30 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="contact-section hidden-section">
-            <div class="container contact-content">
-                <div class="contact-card">
-                    <h2 class="section-title">Ready to build the future?</h2>
-                    <a href="#" class="cta-button-secondary">Get in Touch</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2025 AI & Robotics. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </div>
+    <div class="container contact-content">
+        <div class="contact-card">
+            <h2 class="section-title">Ready to Revolutionize Disaster Response?</h2>
+            <p>Partner with us to bring cutting-edge AI and geospatial intelligence to the frontlines of humanitarian action. Let’s collaborate to build smarter, faster, and more responsive solutions for disaster management.</p>
+            <a href="#" class="cta-button-secondary">Get in Touch</a>
         </div>
-    </footer>
-    
-    <script src="js/script.js"></script>
+    </div>
+</section>
+
+    </main>
+<footer class="footer">
+    <div class="container footer-content">
+        <p>&copy; 2025 AidFlow AI. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="mapping.js"></script>
 </body>
 </html>
