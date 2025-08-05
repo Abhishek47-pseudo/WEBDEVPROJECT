@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AidFlow AI </title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-</head>    
+</head>
+
 <body>
     <header class="header">
         <div class="container header-container">
@@ -34,80 +40,94 @@
                 <p class="hero-subtitle">Intelligent Logistics and Proactive Resource Allocation During Disasters</p>
                 <a href="#about" class="cta-button">Learn More</a>
             </div>
-        </section> 
+        </section>
 
-    <section id="about" class="about-section hidden-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text-container">
-                    <h2 class="section-title">About AidFlow AI</h2>
-                    <p>AidFlow AI is a next-generation disaster response platform that combines AI-driven image analysis with intuitive geospatial visualization to support faster, smarter humanitarian logistics. Tailored for NGOs and government agencies, the platform transforms aerial imagery into actionable insights—helping teams quickly assess damage, allocate resources, and respond with precision.</p>
-                </div>
-                <div class="about-text-container">
-                    <p>By leveraging deep learning for multi-label classification, AidFlow AI detects and geotags critical disaster features like floods, infrastructure damage, and fallen vegetation. These insights are presented through a dynamic, map-based dashboard that empowers users to visualize disaster severity, locations, and timestamps in real time.</p>
-                    <p>Built with scalability and frontline usability in mind, the platform lays the foundation for advanced features like automated rerouting, predictive alerts, and intelligent resource distribution. AidFlow AI bridges the gap between cutting-edge AI and real-world impact—offering a reliable, high-precision tool for modern disaster management teams.</p>
+        <section id="about" class="about-section hidden-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text-container">
+                        <h2 class="section-title">About AidFlow AI</h2>
+                        <p>AidFlow AI is a next-generation disaster response platform that combines AI-driven image
+                            analysis with intuitive geospatial visualization to support faster, smarter humanitarian
+                            logistics. Tailored for NGOs and government agencies, the platform transforms aerial imagery
+                            into actionable insights—helping teams quickly assess damage, allocate resources, and
+                            respond with precision.</p>
+                    </div>
+                    <div class="about-text-container">
+                        <p>By leveraging deep learning for multi-label classification, AidFlow AI detects and geotags
+                            critical disaster features like floods, infrastructure damage, and fallen vegetation. These
+                            insights are presented through a dynamic, map-based dashboard that empowers users to
+                            visualize disaster severity, locations, and timestamps in real time.</p>
+                        <p>Built with scalability and frontline usability in mind, the platform lays the foundation for
+                            advanced features like automated rerouting, predictive alerts, and intelligent resource
+                            distribution. AidFlow AI bridges the gap between cutting-edge AI and real-world
+                            impact—offering a reliable, high-precision tool for modern disaster management teams.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
 
         <section id="services" class="services-section hidden-section">
-  <div class="container">
-    <h2 class="section-title text-center">Our Services</h2>
-    <div class="services-grid">
+            <div class="container">
+                <h2 class="section-title text-center">Our Services</h2>
+                <div class="services-grid">
 
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
-        <h3 class="service-title"><a href="#map">Live Disasters</a></h3>
-        <p class="service-description">Track ongoing disasters in real time with up-to-date geospatial insights and incident reports.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-route"></i></div>
-        <h3 class="service-title">Smart Routing</h3>
-        <p class="service-description">Find the safest and fastest paths using AI-based routing that avoids danger zones and blockages.</p>
-      </div>
+                    <div class="service-card" style="--bg-url: url('imgs/live_dist.jpg');">
+                        <div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h3 class="service-title"><a href="#map">Live Disasters</a></h3>
+                        <p class="service-description">Track ongoing disasters in real time...</p>
+                    </div>
 
 
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-box-open"></i></div>
-        <h3 class="service-title">Search Inventory</h3>
-        <p class="service-description">Quickly locate and request supplies from distributed aid inventories and local storage hubs.</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
-        <h3 class="service-title">Contribute</h3>
-        <p class="service-description">Upload images, share local information, or volunteer your help to support relief operations.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-route"></i></div>
+                        <h3 class="service-title">Smart Routing</h3>
+                        <p class="service-description">Find the safest and fastest paths using AI-based routing that
+                            avoids danger zones and blockages.</p>
+                    </div>
 
 
-<section id="map" class="map-section hidden-section">
-  <div class="map-container">
-    <div id="disaster-map"></div>
-    <div id="data-table-container">
-      <h3>Disaster Data</h3>
-      <table id="data-table">
-        <thead>
-          <tr>
-            <!-- <th>Image</th> -->
-            <th>Time</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-            <th>Labels</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </div>
-</section>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-box-open"></i></div>
+                        <h3 class="service-title">Search Inventory</h3>
+                        <p class="service-description">Quickly locate and request supplies from distributed aid
+                            inventories and local storage hubs.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3 class="service-title">Contribute</h3>
+                        <p class="service-description">Upload images, share local information, or volunteer your help to
+                            support relief operations.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="map" class="map-section hidden-section">
+            <div class="map-container">
+                <div id="disaster-map"></div>
+                <div id="data-table-container">
+                    <h3>Disaster Data</h3>
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <!-- <th>Image</th> -->
+                                <th>Time</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>Labels</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
 
 
@@ -116,19 +136,19 @@
                 <h2 class="section-title text-center">Meet the Team</h2>
                 <div class="team-grid">
                     <div class="team-member">
-                        <div class="member-photo"><img src ='imgs/Aaditya.jpg'></div>
+                        <div class="member-photo"><img src='imgs/Aaditya.jpg'></div>
                         <h3 class="member-name">Aaditya Arya</h3>
                     </div>
                     <div class="team-member">
-                        <div class="member-photo"><img src ='imgs/Abhishek.jpg'></div>
+                        <div class="member-photo"><img src='imgs/Abhishek.jpg'></div>
                         <h3 class="member-name">Abhishek Kumar</h3>
                     </div>
                     <div class="team-member">
-                        <div class="member-photo"><img src ='imgs/Parth.jpg'></div>
+                        <div class="member-photo"><img src='imgs/Parth.jpg'></div>
                         <h3 class="member-name">Parth Mehta</h3>
                     </div>
                     <div class="team-member">
-                        <div class="member-photo"><img src ='imgs/Sydney.jpg'></div>
+                        <div class="member-photo"><img src='imgs/Sydney.jpg'></div>
                         <h3 class="member-name">Sydney Sweeny</h3>
                     </div>
                 </div>
@@ -136,29 +156,42 @@
         </section>
 
         <section id="contact" class="contact-section hidden-section">
-    <div class="container contact-content">
-        <div class="contact-card">
-            <h2 class="section-title">Ready to Revolutionize Disaster Response?</h2>
-            <p>Partner with us to bring cutting-edge AI and geospatial intelligence to the frontlines of humanitarian action. Let’s collaborate to build smarter, faster, and more responsive solutions for disaster management.</p>
-            <a href="#" class="cta-button-secondary">Get in Touch</a>
-        </div>
-    </div>
-</section>
+            <div class="container contact-content">
+                <div class="contact-card">
+                    <h2 class="section-title">Ready to Revolutionize Disaster Response?</h2>
+                    <p>
+                        Partner with us to bring cutting-edge AI and geospatial intelligence to the frontlines of
+                        humanitarian action. Let’s collaborate to build smarter, faster, and more responsive solutions
+                        for disaster management.
+                    </p>
+
+                    <!-- Contact Form -->
+                    <form class="contact-form" action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required />
+                        <input type="email" name="email" placeholder="Your Email" required />
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="cta-button-secondary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
 
     </main>
-<footer class="footer">
-    <div class="container footer-content">
-        <p>&copy; 2025 AidFlow AI. All rights reserved.</p>
-        <div class="social-links">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 AidFlow AI. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="X (formerly Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<script src="js/script.js"></script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="js/mapping.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/mapping.js"></script>
 </body>
+
 </html>

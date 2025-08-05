@@ -1,10 +1,10 @@
 
 :root {
-    --primary-bg: #06576d;           
+    --primary-bg: #000000;           
     --secondary-bg: #3f698e;         /* Slightly lighter for depth contrast */
     --text-color: #E6F0F3;           /* Soft white-blue - easy on eyes */
     --heading-color: #ffb625;        /* Clear white for headers */
-    --brand-color: #ccc72f;          /* Bright cyan-blue - signals tech + trust */
+    --brand-color: #d6def5;          /* Bright cyan-blue - signals tech + trust */
     --accent-color: #F7A440;         /* Orange-yellow - used sparingly for alerts/highlights */
     --button-bg: #2FA8CC;            /* Matches brand color for CTAs */
     --button-hover-bg: #2389A6;      /* Darker shade for hover interaction */
@@ -35,7 +35,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--primary-bg);
+    background: linear-gradient(90deg, var(--primary-bg), var(--secondary-bg));
     box-shadow: 0 2px 10px var(--shadow-color);
     z-index: 1000;
     padding: 1rem 0;
@@ -70,7 +70,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--brand-color);
+    color: var(--accent-color);
 }
 
 .nav-toggle {
@@ -126,7 +126,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('https://placehold.co/1920x1080/011936/F4FFFD?text=AI+%26+Robotics') center/cover no-repeat;
+    background: url('https://placehold.co/1920x1080/011936/F4FFFD?text=AidFlow') center/cover no-repeat;
     text-align: center;
     position: relative;
     padding-top: 80px; 
@@ -153,13 +153,24 @@ body {
     font-size: 3rem;
     font-weight: 700;
     color: var(--heading-color);
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
     margin: 0 0 1rem;
     animation: fadeInDown 1s ease-out;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--accent-color);
+    color: var(--text-color);
+    font-family: Bebas Neue;
+    text-shadow:
+        -1px -1px 0 black,
+         /* 1px -1px 0 black, */
+        -1px  1px 0 black,
+         1px  1px 0 black;
     margin: 0 0 2rem;
     animation: fadeInUp 1s ease-out 0.5s;
     animation-fill-mode: both;
@@ -248,17 +259,26 @@ body {
 }
 
 .service-card {
-    background-color: var(--card-bg);
-    border-radius: 10px;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 4px 15px var(--shadow-color);
-    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    background-color: rgba(41, 12, 12, 0.95); 
+    padding: 30px 20px;
+    border-radius: 12px;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px var(--shadow-color);
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-url);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .service-icon {
@@ -402,7 +422,7 @@ body {
     background-color: var(--primary-bg);
     padding: 2rem 0;
     border-top: 1px solid var(--card-bg);
-    box-shadow: 0 -2px 10px var(--shadow-color); /* subtle elevation */
+    box-shadow: 0 -2px 10px var(--shadow-color); 
 }
 
 .footer-content {
@@ -412,7 +432,7 @@ body {
     align-items: center;
     gap: 1rem;
     text-align: center;
-    color: var(--text-color); /* ensures text is readable on dark bg */
+    color: var(--text-color); 
 }
 
 .footer-content p {
@@ -464,7 +484,7 @@ body {
   min-width: 300px;
   border-radius: 12px;
   box-shadow: 0 0 20px var(--shadow-color);
-  background-color: #ccc; /* fallback if map fails */
+  background-color: #ccc; 
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -499,3 +519,48 @@ body {
   top: 0;
   z-index: 1;
 }
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: var(--secondary-bg);
+    text-align: center;
+}
+
+.contact-card {
+    max-width: 600px;
+    width: 100%;
+    background-color: var(--primary-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color: var(--text-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #000;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 10px;
+}
+
